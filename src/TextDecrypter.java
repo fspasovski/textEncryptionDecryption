@@ -35,7 +35,7 @@ public class TextDecrypter {
                 String replaceWith = br.readLine();
                 String beforeState = encryptedText;
 
-                encryptedText = encryptedText.replaceFirst(replaceText, replaceWith.toUpperCase());
+                encryptedText = encryptedText.replaceAll(replaceText, replaceWith.toUpperCase());
 
                 TextState ts = new TextState(beforeState, encryptedText, replaceText, replaceWith);
                 textStates.add(ts);
